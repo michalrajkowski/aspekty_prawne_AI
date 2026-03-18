@@ -15,8 +15,8 @@ Przygotujcie szczegolowa ewidencje wszystkich zasobow wykorzystywanych i tworzon
 | 3 | R5 (Conveyal) | Silnik routingu / transport | Analizy transportowe i liczenie czasow dojazdu dla ruchu pieszego, rowerowego, samochodowego i transportu publicznego. | https://github.com/conveyal/r5 | MIT | https://github.com/conveyal/r5/blob/dev/LICENSE | @mateusz.zbrocki |
 | 4 | NetworkX | Biblioteka Python | Reprezentacja grafow i algorytmy grafowe do pracy na sieci polaczen, tras i zaleznosci miedzy punktami. | https://networkx.org | BSD 3-Clause | https://networkx.org/documentation/stable/ | @mateusz.zbrocki |
 | 5 | r5py | Biblioteka Python | Pythonowy wrapper do R5, uzywany do wyznaczania tras, macierzy czasow przejazdu i analiz dostepnosci transportowej. | https://r5py.readthedocs.io/stable/ | GPL-3.0-or-later OR MIT | https://r5py.readthedocs.io/stable/user-guide/citation.html | @mateusz.zbrocki |
-| 6 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
-| 7 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
+| 6 | LangChain | Biblioteka Python | Framework do budowy logiki wieloagentowej, orkiestracji modelu LLM, promptów, narzędzi i zarządzania pamięcią agenta. | https://github.com/langchain-ai/langchain | MIT | https://github.com/langchain-ai/langchain/blob/master/LICENSE | @Julianna.Godziszewska |
+| 7 | OpenAI (modele GPT) | API / Model ML | Główny model językowy sterujący logiką agentów, generujący plany wycieczek na podstawie danych przestrzennych i tekstowych. | https://platform.openai.com | Komercyjna (API ToS) | https://openai.com/policies/terms-of-use/ | @Julianna.Godziszewska |
 | 8 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
 | 9 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
 | 10 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
