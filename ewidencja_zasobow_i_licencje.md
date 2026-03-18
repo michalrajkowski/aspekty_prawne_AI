@@ -19,13 +19,18 @@ Przygotujcie szczegolowa ewidencje wszystkich zasobow wykorzystywanych i tworzon
 | 7 | LangGraph | Biblioteka Python | Niskopoziomowy framework orkiestracyjny przeznaczony do budowy agentów stanowych (stateful agents). | https://github.com/langchain-ai/langgraph | MIT | https://github.com/langchain-ai/langgraph/blob/main/LICENSE | @Julianna.Godziszewska |
 | 8 | OpenAI (modele GPT) | API / Model ML | Główny model językowy sterujący logiką agentów, generujący plany wycieczek na podstawie danych przestrzennych i tekstowych. | https://platform.openai.com | Komercyjna (API ToS) | https://openai.com/policies/terms-of-use/ | @Julianna.Godziszewska |
 | 9 | Playwright | Biblioteka Python | Główny framework do automatyzacji przeglądarki, służący do obsługi dynamicznych elementów i scrapowania danych z witryn internetowych. | https://playwright.dev/python/ | Apache 2.0 | https://github.com/microsoft/playwright-python/blob/main/LICENSE | @Julianna.Godziszewska |
-| 10 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
-| 11 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
-| 12 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
-| 13 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
+| 10 | BAAI/BGE-M3 | embedding model | Bardzo dobry model do tworzenia osadzeń tekstowych, co ciekawe jednocześnie Chiński i na licencji MIT | [Huggingface](https://huggingface.co/BAAI/bge-m3), [repozytorium git](https://github.com/FlagOpen/FlagEmbedding/blob/master/LICENSE) | MIT |  [repozytorium git](https://github.com/FlagOpen/FlagEmbedding/blob/master/LICENSE) | @michal.rajkowski |
+| 11 | DeepSeek-R1 | reasoningowy llm | Bardzo dobry LLM z reasoningiem. Co ciekawe ma wiele wersji i niektóre są na innej licencji [1] | [Huggingface](https://huggingface.co/deepseek-ai/DeepSeek-R1) | MIT[1] | [Huggingface](https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/main/LICENSE) , [dodatkowy dopisek](https://huggingface.co/deepseek-ai/DeepSeek-R1#7-license) | @michal.rajkowski |
+| 12 | openai/gpt-oss-120 | Otwartowagowy LLM | Bardzo dobry model LLM otwartowagowy. | [Huggingface](https://huggingface.co/openai/gpt-oss-120b), [Karta modeli](https://openai.com/index/gpt-oss-model-card/) | Apache 2.0 + Usage Policy [2] | [Huggingface](https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE) | @michal.rajkowski |
+| 13 | 
+CYFRAGOVPL/Llama-PLLuM-70B-chat | polski LLM  | Poslki LLM wytworzony przy współpracy z Politechniką Wrocławską | [Huggingface](https://huggingface.co/CYFRAGOVPL/Llama-PLLuM-70B-chat) | Llama 3.1 | [Huggingface](https://huggingface.co/CYFRAGOVPL/Llama-PLLuM-70B-chat/blob/main/LICENSE) | @michal.rajkowski |
 | 14 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
 | 15 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
 | 16 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
+
+[1] - co ciekawe niektóre wersje DeepSeek'a-R1 posiadają inną licencję niż MIT, bo np. były bazowane na Qwen'ach podlegających pod licencję Apache 2.0, albo Llamach: https://huggingface.co/deepseek-ai/DeepSeek-R1#7-license.
+
+[2] - obok licencji jest także zawarty [USAGE_POLICY](https://huggingface.co/openai/gpt-oss-120b/blob/main/USAGE_POLICY). 
 
 ---
 <h1 style="display: flex; align-items: center; gap: 8px;">
