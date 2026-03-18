@@ -28,11 +28,6 @@ Przygotujcie szczegolowa ewidencje wszystkich zasobow wykorzystywanych i tworzon
 | 16 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
 
 ---
-
-Uwagi robocze:
-- Wpis dla Nominatim zaklada korzystanie z publicznego API OSMF.
-- `R5` i `r5py` sa wpisane osobno: silnik Java i wrapper Python to dwa rozne zasoby.
-
 <h1 style="display: flex; align-items: center; gap: 8px;">
   <span>Prompty do Chatów</span>
   <img
