@@ -23,9 +23,9 @@ Przygotujcie szczegolowa ewidencje wszystkich zasobow wykorzystywanych i tworzon
 | 11 | DeepSeek-R1 | reasoningowy llm | Bardzo dobry LLM z reasoningiem. Co ciekawe ma wiele wersji i niektóre są na innej licencji [1] | [Huggingface](https://huggingface.co/deepseek-ai/DeepSeek-R1) | MIT[1] | [Huggingface](https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/main/LICENSE) , [dodatkowy dopisek](https://huggingface.co/deepseek-ai/DeepSeek-R1#7-license) | @michal.rajkowski |
 | 12 | openai/gpt-oss-120 | Otwartowagowy LLM | Bardzo dobry model LLM otwartowagowy. | [Huggingface](https://huggingface.co/openai/gpt-oss-120b), [Karta modeli](https://openai.com/index/gpt-oss-model-card/) | Apache 2.0 + Usage Policy [2] | [Huggingface](https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE) | @michal.rajkowski |
 | 13 | CYFRAGOVPL/Llama-PLLuM-70B-chat | polski LLM  | Poslki LLM wytworzony przy współpracy z Politechniką Wrocławską | [Huggingface](https://huggingface.co/CYFRAGOVPL/Llama-PLLuM-70B-chat) | Llama 3.1 | [Huggingface](https://huggingface.co/CYFRAGOVPL/Llama-PLLuM-70B-chat/blob/main/LICENSE) | @michal.rajkowski |
-| 14 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
-| 15 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
-| 16 | TODO | TODO | TODO | TODO | TODO | TODO | @imie.nazwisko |
+| 14 | Google Maps | Zbior danych / dane mapowe | Komercyjny serwis oferujący m.in. mapy drogowe, nawigację, geokodowanie i rozbudowaną bazę informacji o punktach POI. | (https://www.google.pl/maps) | Komercyjna (Google ToS) | [TODO](https://www.google.com/intl/pl_US/help/terms_maps/) | @Michał.Bernacki-Janson |
+| 15 | MoritzLaurer/mDeBERTa-v3-base-mnli-xnli | zero-shot classification model | Wielojęzyczny model NLP (oparty na architekturze mDeBERTa-v3), zoptymalizowany pod kątem klasyfikacji zero-shot i wnioskowania w języku naturalnym (NLI). | (https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-mnli-xnli) | MIT | (https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md) | @Michał.Bernacki-Janson |
+| 16 | Python | język programowania | język programowania użyty w projekcie | (https://www.python.org/) |  PSF License Version 2 i Zero-Clause BSD | (https://docs.python.org/3/license.html) | @Michał.Bernacki-Janson |
 
 [1] - co ciekawe niektóre wersje DeepSeek'a-R1 posiadają inną licencję niż MIT, bo np. były bazowane na Qwen'ach podlegających pod licencję Apache 2.0, albo Llamach: https://huggingface.co/deepseek-ai/DeepSeek-R1#7-license.
 
