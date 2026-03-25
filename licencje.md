@@ -16,13 +16,13 @@ Krótki, konkretny opis (pół strony na osobę) — nie przepisujcie tekstu lic
 |---|---|---|---|---|
 | 1 | Apache 2.0 | https://www.apache.org/licenses/LICENSE-2.0 | **1. Użycie komercyjne:** Licencja w pełni dopuszcza komercyjne wykorzystanie oprogramowania. Oznacza to brak barier prawnych w przypadku ewentualnej chęci monetyzacji naszego projektu. Możemy wdrożyć nasz produkt jako płatną usługę bez konieczności uiszczania opłat licencyjnych.<br><br>**2. Wirusowość:** Licencja ta nie zawiera mechanizmu copyleft, co oznacza, że wykorzystanie frameworka lub modelu będącym na licencji Apache2.0 nie wymusza na nas udostępniania kodu źródłowego całego projektu NW na tych samych, otwartych zasadach. Nasze autorskie algorytmy, logika agentów oraz potoki przetwarzania danych mogą pozostać w pełni zamknięte.<br><br>**3. Atrybucja:** Przy ewentualnej dystrybucji projektu NW jesteśmy zobowiązani do spełnienia wszystkich czterech warunków:
 
-1. Przekazania każdemu odbiorcy naszego systemu kopii oryginalnej licencji Apache 2.0.
+Przekazania każdemu odbiorcy naszego systemu kopii oryginalnej licencji Apache 2.0.
 
-2. W przypadku modyfikacji jakichkolwiek oryginalnych plików źródłowych, musimy wyraźnie oznaczyć te pliki informacją o dokonanych przez nas zmianach.
+W przypadku modyfikacji jakichkolwiek oryginalnych plików źródłowych, musimy wyraźnie oznaczyć te pliki informacją o dokonanych przez nas zmianach.
 
-3. Zachowania wszystkich oryginalnych informacji o prawach autorskich, patentach i znakach towarowych (tzw. copyright notices) znajdujących się w kodzie źródłowym.
+Zachowania wszystkich oryginalnych informacji o prawach autorskich, patentach i znakach towarowych (tzw. copyright notices) znajdujących się w kodzie źródłowym.
 
-4. Dołączenia czytelnej kopii informacji zawartych w oryginalnym pliku NOTICE (jeśli taki istnieje w dystrybucji wykorzystywanego narzędzia).
+Dołączenia czytelnej kopii informacji zawartych w oryginalnym pliku NOTICE (jeśli taki istnieje w dystrybucji wykorzystywanego narzędzia).
 
 W praktyce wymogi te można zrealizować poprzez fizyczne umieszczenie odpowiednich plików (LICENSE oraz ewentualnego NOTICE) w głównym katalogu naszego repozytorium oraz pozostawienie oryginalnych nagłówków w kodzie.<br><br>**5. Kompatybilność:** Licencja ta współgra ze wszystkimi pozostałymi licencjami w naszym projekcie (m.in. MIT, BSD, ODbL, Llama 3.1 i API ToS). Apache 2.0 niczego nie narzuca i nie wymusza swoich własnych zasad na innych komponentach systemu, przez co nie tworzy konfliktów prawnych i pozwala nam swobodnie łączyć kod, modele i dane z różnych źródeł.  | @Julianna.Godziszewska |
 | 2 | TODO | TODO | TODO | TODO |
