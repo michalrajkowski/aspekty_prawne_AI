@@ -10,10 +10,20 @@ Jedna spójna sekcja obejmująca cztery wymiary etyczne Waszego projektu:
 
 ## Przejrzystość
 - **Wykorzystanie AI:** Sztuczna inteligencja jest wykorzystywana do przetwarzania języka naturalnego (rozmowy z klientem poprzez wykorzystany mdoel językowy).
-Automatycznie odbywa się wyszukiwanie wektorowe (RAG) i zapytania do API (OSM) oraz ukłądanie lanu wycieczki
+Automatycznie odbywa się wyszukiwanie wektorowe (RAG) i zapytania do API (OSM) oraz ukłąaanie planu wycieczki.
 - **Człowiek w pętli:** System ma charakter doradczy, co oznacza, że ostetczną decyzję odnośie planu oraz elementów wycieczki dokonuje użytkownik, który może narzucic swoje wybory systemowi. Wszelkich rezerwacji biletów itp. użytkonik musi tez sam dokonać.
 - **Udostępnianie:** Dla potencjalnych klientów udostepniamy zarówno kod jak i bazę wiedzy (zbiór danych). Natomiast użytkownik końcowy korzysta wyłącznie z interfejsu systemu i nie ma wglądu ani w kod, ani bezpośrednio w zbiór danych.
 
-## Wyjasnialność
-**Zidentyfikowane ryzyka:** 
-- Halucynacje modeli językowych, przez co mogłyby polecić nieistniejące już restauracje, czy niezaktualizowane godiny otwarcia atrakcji. Z tego względu zdecydowalismy się na wykorzystanie systemu RAG, w którym LLM korzysta z bazy wiedzy, która jest na bieżąco aktualizowana o najnowsze informacje. Dodatkowo model językowy po zaproponowaniu jakiejs atrakcji poweinien powołać się na nią i podac np. link do jej oficjalnej strony, tak aby użytkownik mógł sprawdzić aktualność danych z oficjalnymi źródłami. 
+## Wyjaśnialność
+- **Zidentyfikowane ryzyka:** Halucynacje modeli językowych - LLM mógłby polecić nieistniejące już restauracje, czy niezaktualizowane godiny otwarcia atrakcji. Z tego względu zdecydowalismy się na wykorzystanie systemu RAG, w którym LLM korzysta z bazy wiedzy, która jest na bieżąco aktualizowana o najnowsze informacje. Dodatkowo model językowy po zaproponowaniu jakiejs atrakcji poweinien powołać się na nią i podac np. link do jej oficjalnej strony, tak aby użytkownik mógł sprawdzić aktualność danych z oficjalnymi źródłami.
+
+## Inkluzywność
+- **Wpływ na rynek pracy:** - Asystent nie ma na celu zastąpienia licencjonowanych przewodników. Narzędzie automatyzuje żmudny proces planowania, wspierając turystykę niezależną. System może różniez służyć jako narzędzie wspomagające dla klientów biur podróży lub promować konkretne atrakcje, restauracje itd. (w zależności od budowy bazy wiedzy).
+- **Potencjalna dyskryminacja:** - Pomijanie niektórych atrakcji lub miejsc (np. nie polecanie użytkownikowi jednej kawiarni, która idealnie pasowałaby do planu, ze względu na brak informacji o niej w bazie danych lub celowe nieuwzględnienie jej w bazie danych).
+
+## Wyrównanie
+- **Prawo Autorskie:** Ryzyko kopiowania cudzych, twórczych treści (np. całych artykułów z blogów).
+- **RODO:**
+- - System aktywnie buduje profile turystyczne, na stałe przechowując preferencje użytkowników (np. alergie, ulubione typy atrakcji) pozyskane z promptów. - Użytkownik wyraża świadomą zgodę na zapisywanie preferencji i w każdej chwili za pomocą jednego kliknięcia ma prawo do usunięcia swojego konta i historii konwersacji (realizacja prawa do bycia zapomnianym).
+- - Istnieje ryzyko pobrania przypadkowych danych osobowych, np. podczas scrapowania opinii podczas tworzenia lub aktualizowania bazy wiedzy RAG. - Wprowadzamy filtry oczyszczające recenzje z danych osobowych przed dodaniem ich do wektorowej bazy (minimalizacja danych). 
+- **AI Act:** Zgodnie z unijnym rozporządzeniem, nasz Asystent kwalifikuje się jako system "ograniczonego ryzyka" (chatbot w domenie niezagrażającej życiu ani zdrowiu). Spełniamy wszystkie wymogi poprzez jasne znakowanie, że użytkownik wchodzi w interakcję z maszyną. System informuje przy powitaniu, że nie jest prawdziwym człowiekiem, a maszyną. Dodatkowo każda wygenerowana trasa zawiera zastrzeżenie, że opiera się na rekomendacjach AI, a użytkownik musi wziąć poprawkę na czynniki losowe (aktualność cen, nagłe remonty, pogodę), które mogły ulec zmianie w świecie rzeczywistym.
