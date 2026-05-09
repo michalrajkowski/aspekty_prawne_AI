@@ -37,6 +37,7 @@ Jeżeli chodzi o licencje, to:
 - budujemy bazę poprzez OSM, objętego licencją ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/). Dotyczy nas fragment odnośnie Derivative Database. Zasady powiązane z użyciem Derivative Database różnią się w zależności od tego, czy wykorzystujemy bazę prywatnie, czy publicznie. Rozdział `4.4 Share alike.` ODbL 1.0 wskazuje, że każda baza w wykorzystaniu publicznym oparta o bazę z ODbL automatycznie wymaga licencji ODbL 1.0 lub kompatybilnej licencji. Mimo że nie wystawiamy bazy jako publicznej usługi, to sam fakt, że nasz chat/agenci po wystawieniu publicznym produkowaliby widoczne wiadomości, już sprawia, że nasz zasób to Publicly Used Derivative Database (a co za tym idzie z `4.6 Access to Derivative Databases` będziemy musieli wystawić publicznie samą bazę 😥 `If You Publicly Use a Derivative Database or a Produced Work from a Derivative Database, You must also offer to recipients of the Derivative Database or Produced Work a copy in a machine readable form`).
 - dane, które "doscrapowaliśmy" z wiki, są CC BY-SA 2.0
 - zatem nasza baza danych w "optymistycznym założeniu" jest zasobem licencji mieszanej, z danymi OSM jako ODbL 1.0 i dołączonymi tekstami z wiki CC BY-SA 2.0. W "pesymistycznym założeniu" dołączone teksty z wiki są niekompatybilne z ODbL 1.0 publicznej bazy danych i musimy albo je wyrzucić, albo zastanowić się, jak sprawić, aby nie była to Publicly Used Derivative Database.
+> by @michal.rajkowski
 
 ### 2. Kod projektu
 
@@ -45,6 +46,8 @@ Posiadamy prawa autorskie do naszego kodu, więc możemy samodzielnie ustalić l
 Problem może pojawić się w przypadku wykorzystywanych bibliotek. W trakcie researchu związanego z projektem zauważyłem, że biblioteka NLTK może „dyskretnie” wprowadzić do projektu elementy problematyczne pod względem licencyjnym. Samo NLTK jest objęte licencją `Apache 2.0`, ale pakiety danych `nltk_data` nie zawsze są udostępniane na tej samej licencji.
 
 Znane korpusy, takie jak `punkt`, `punkt_tab` i `stopwords`, nie mają wskazanej licencji w pliku [`index.xml`](https://github.com/nltk/nltk_data/blob/gh-pages/index.xml).
+
+> by @michal.rajkowski
 
 
 [1] - co ciekawe niektóre wersje DeepSeek'a-R1 posiadają inną licencję niż MIT, bo np. były bazowane na Qwen'ach podlegających pod licencję Apache 2.0, albo Llamach: https://huggingface.co/deepseek-ai/DeepSeek-R1#7-license.
