@@ -27,6 +27,26 @@ Przygotujcie szczegolowa ewidencje wszystkich zasobow wykorzystywanych i tworzon
 | 15 | MoritzLaurer/mDeBERTa-v3-base-mnli-xnli | zero-shot classification model | Wielojęzyczny model NLP (oparty na architekturze mDeBERTa-v3), zoptymalizowany pod kątem klasyfikacji zero-shot i wnioskowania w języku naturalnym (NLI). | (https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-mnli-xnli) | MIT | (https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/mit.md) | @Michał.Bernacki-Janson |
 | 16 | Python | język programowania | język programowania użyty w projekcie | (https://www.python.org/) |  PSF License Version 2 i Zero-Clause BSD | (https://docs.python.org/3/license.html) | @Michał.Bernacki-Janson |
 
+# Zasoby własne:
+
+### 1. RAGowa baza wiedzy.
+Posiadamy bazę wiedzy do SQL-owych zapytań RAG-owych na temat miejsc we Wrocławiu. Składa się z danych pochodzących z OSM, które przefiltrowaliśmy i uzyskaliśmy tylko relewantny, mniejszy dziedzinowy podzbiór. Przechowujemy je w bazie danych SQLite. Wzbogaciliśmy tagi OSM o opisy z OpenStreetMap Wiki, `np. https://wiki.openstreetmap.org/wiki/Key:amenity`, aby dla każdej pary key:value dodać także opis z wiki. 
+
+Jeżeli chodzi o licencje, to:
+- wykorzystany do bazy SQLite jest w domenie publicznej (https://sqlite.org/copyright.html) (co ciekawe istnieje możliwość kupienia licencji SQLite za 6000$ https://sqlite.org/purchase/license?)
+- budujemy bazę poprzez OSM, objętego licencją ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/). Dotyczy nas fragment odnośnie Derivative Database. Zasady powiązane z użyciem Derivative Database różnią się w zależności od tego, czy wykorzystujemy bazę prywatnie, czy publicznie. Rozdział `4.4 Share alike.` ODbL 1.0 wskazuje, że każda baza w wykorzystaniu publicznym oparta o bazę z ODbL automatycznie wymaga licencji ODbL 1.0 lub kompatybilnej licencji. Mimo że nie wystawiamy bazy jako publicznej usługi, to sam fakt, że nasz chat/agenci po wystawieniu publicznym produkowaliby widoczne wiadomości, już sprawia, że nasz zasób to Publicly Used Derivative Database (a co za tym idzie z `4.6 Access to Derivative Databases` będziemy musieli wystawić publicznie samą bazę 😥 `If You Publicly Use a Derivative Database or a Produced Work from a Derivative Database, You must also offer to recipients of the Derivative Database or Produced Work a copy in a machine readable form`).
+- dane, które "doscrapowaliśmy" z wiki, są CC BY-SA 2.0
+- zatem nasza baza danych w "optymistycznym założeniu" jest zasobem licencji mieszanej, z danymi OSM jako ODbL 1.0 i dołączonymi tekstami z wiki CC BY-SA 2.0. W "pesymistycznym założeniu" dołączone teksty z wiki są niekompatybilne z ODbL 1.0 publicznej bazy danych i musimy albo je wyrzucić, albo zastanowić się, jak sprawić, aby nie była to Publicly Used Derivative Database.
+
+### 2. Kod projektu
+
+Posiadamy prawa autorskie do naszego kodu, więc możemy samodzielnie ustalić licencję, na jakiej chcemy go wydać. Nie podjęliśmy jeszcze w tej sprawie decyzji.
+
+Problem może pojawić się w przypadku wykorzystywanych bibliotek. W trakcie researchu związanego z projektem zauważyłem, że biblioteka NLTK może „dyskretnie” wprowadzić do projektu elementy problematyczne pod względem licencyjnym. Samo NLTK jest objęte licencją `Apache 2.0`, ale pakiety danych `nltk_data` nie zawsze są udostępniane na tej samej licencji.
+
+Znane korpusy, takie jak `punkt`, `punkt_tab` i `stopwords`, nie mają wskazanej licencji w pliku [`index.xml`](https://github.com/nltk/nltk_data/blob/gh-pages/index.xml).
+
+
 [1] - co ciekawe niektóre wersje DeepSeek'a-R1 posiadają inną licencję niż MIT, bo np. były bazowane na Qwen'ach podlegających pod licencję Apache 2.0, albo Llamach: https://huggingface.co/deepseek-ai/DeepSeek-R1#7-license.
 
 [2] - obok licencji jest także zawarty [USAGE_POLICY](https://huggingface.co/openai/gpt-oss-120b/blob/main/USAGE_POLICY). 
