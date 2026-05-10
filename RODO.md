@@ -57,6 +57,13 @@ Zgodnie z definicją RODO, danymi osobowymi są wszelkie informacje o zidentyfik
 Podczas fazy developmentu systemu, scrapowania, utrzymania systemu (debugging) oraz analizy logów bezpieczeństwa.
 
 **W jaki sposób realizowany jest dostęp:**
+- MY (*upoważnieni administratorzy*) - mamy dostęp do wszystkich danych, trzymamy zescrapowane, "zatrute" danymi osobowymi dane na komputerze, który traktujemy jako serwer SSH, i przeprowadzamy na nim obliczenia. Dane przechowujemy też na prywatnej przestrzeni `Hugging Face`, aby można było łatwo klonować wolumeny danych i je wersjonować bez dostępu do maszyny-serwera. Do połączenia z serwerem, oprócz SSH, wymagany jest specjalny VPN.
+
+- testerzy aplikacji - mają dostęp tylko do odpowiedzi agenta konwersacyjnego, nie widzą samych baz danych. Istnieje osobna baza danych produkcyjna, już oczyszczona z danych osobowych, oraz baza "raw", która może zawierać niechciane dane i wymaga oczyszczenia.
+
+- dostawcy modeli - do czyszczenia i przeprocesowywania danych, w których mogą być zawarte dane osobowe, wykorzystujemy modele LLM. Tak więc jest to przeciek danych i należy wykorzystać self-hostowany model albo inny sposób czyszczenia, aby nie wysyłać danych do zewnętrznych dostawców.
+
+*Legal note - opis przedstawia hipotetyczne rozwiązanie na rzecz kursu aspekty prawne i nie odwzorowuje realnego potoku przetwarzania danych projektu Travel Planer :)*
 
 ## 4. Obowiązki wynikające z RODO — co musicie zapewnić?
 
@@ -73,4 +80,18 @@ Niestosowanie się do przepisów RODO niesie za sobą poważne konsekwencje na w
 * **Kary administracyjne (finansowe):** Wymierzane przez Prezesa UODO. Za lżejsze naruszenia kara sięga do 10 mln EUR lub 2% całkowitego rocznego światowego obrotu. Za najcięższe przewinienia (np. rażące naruszenie podstawowych praw, ignorowanie żądań usunięcia danych) grozi do 20 mln EUR lub 4% obrotu.
 * **Działania naprawcze UODO:** Urząd może nakazać tymczasowe lub całkowite ograniczenie przetwarzania. W praktyce oznacza to nakaz wyłączenia systemu i całkowitego usunięcia nielegalnie zbudowanej bazy wektorowej.
 * **Odpowiedzialność cywilna:** Osoby, których dane wyciekły z systemu, mogą domagać się przed sądem odszkodowania za poniesione szkody.
-* **Ryzyko wizerunkowe:** Utrata zaufania użytkowników do naszego systemu. 
+* **Ryzyko wizerunkowe:** Utrata zaufania użytkowników do naszego systemu.
+
+# DODATKOWE SPROSTOWANIA:
+
+> Czy "Jan Kowalski..." w bazie wektorowej to nadal dane osobowe?
+
+Zwykle z bazą wektorową i osadzeniami powiązany jest korpus chunków, w którym występowałaby tekstowa reprezentacja tego wektora, więc są to w oczywisty sposób dane osobowe.
+
+Jednak jeżeli pytamy, czy sam embedding zawierający dane osobowe Jana Kowalskiego łamie RODO, to uznalibyśmy, że jest to przypadek zbliżony do szyfrowania danych w postaci hashy. Aby można było traktować nasze dane jako w pełni zanonimizowane, kodowanie powinno być nieodwracalne w praktyce. W teorii można by spróbować odgadnąć oryginalny tekst osadzenia poprzez atak słownikowy, ale patrząc na to, że zwykle chunki mają długość ~500 znaków, a czas osadzania jest dużo dłuższy niż hashowania, jest to niewykonalne. Chcąc jednak znaleźć informacje o konkretnej osobie, ktoś wyjątkowo zdeterminowany mógłby próbować wyznaczać różne hasła, które mogłyby znaleźć się w bazie wektorowej, i szukać takich, które dla Jana Kowalskiego dają bardzo wysokie podobieństwo.
+
+Z tego powodu uznalibyśmy, że osadzenie wciąż nie jest sposobem na pełną anonimizację i wyciek embeddingów mógłby być problemem od strony RODO.
+
+> Krótka wzmianka, czy potrzebujecie DPIA (przy profilowaniu preferencji).
+
+DPIA przy profilowaniu preferencji w naszym projekcie prawdopodobnie nie jest konieczne. Samo profilowanie preferencji użytkowników byłoby problemem, gdybyśmy zapisywali te dane i później wykorzystywali je do innych celów. W naszym projekcie profilowanie jest wykorzystywane tylko w trakcie pojedynczej rozmowy, aby LLM zapamiętał, co użytkownik lubi, a czego nie, i nie zadawał redundantnych pytań.
